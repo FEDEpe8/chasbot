@@ -9,9 +9,7 @@ let formData = { tipo: "", ubicacion: "", descripcion: "" };
 const MENUS = {
     main: { 
         title: (name) => `¡Hola <b>${name}</b>! 👋 "¿Necesitás algo más? Escribí MENU y vemos las opciones disponibles."
-
 "Para volver a empezar, solo tenés que decirme HOLA."
-
 "¡Estoy para ayudarte! Escribí MENU si querés consultar por otra área.", 
         
         options: [
@@ -228,7 +226,7 @@ const RES = {
         🔗 <b>Linktree Inscripciones:</b><br>
         <a href="https://linktr.ee/visitasguiadas.turismoch" target="_blank">Ingresar al Linktree</a>
     </div>`, 
-    
+
     'omic_info': `
     <div class="info-card">
         <strong>📢 OMIC (Defensa del Consumidor)</strong><br>
@@ -313,7 +311,7 @@ const RES = {
         🏢 <b>Sede Zoonosis:</b> Mendoza 95.
     </div>`,
 
-    'vacunacion_info': `
+  'vacunacion_info': `
     <div class="info-card">
         <strong>💉 Vacunación</strong><br><br>
         🏥 <b>Hospital San Vicente de Paul:</b><br>
@@ -324,8 +322,9 @@ const RES = {
         • <b>Demanda espontánea</b> (No requiere orden médica).<br>
         • <b>Requisitos:</b> Llevar DNI y Libreta de Vacunación.<br><br>
         📱 <i>Consultá las redes de "Secretaría de Salud Chascomús" para horarios actualizados.</i>
-    </div>', 
-    'info_habitat': `
+    </div>`,
+    
+  'info_habitat': `
     <div class="info-card">
         <strong>🔑 Info de Hábitat</strong><br>
         • Registro de Demanda (Mayores de 18).<br>
