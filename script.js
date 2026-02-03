@@ -23,15 +23,14 @@ const MENUS = {
             { id: 'omic', label: '🏦 Denuncias Omic' },
             { id: 'cultura', label: '🎭 Cultura y Agenda', type: 'submenu' },
             { id: 'habitat', label: '🏡 Reg demanda Habitacional', type: 'submenu' },
-            { id: 'contacto_op', label: '☎️ Hablar con Operador', type: 'leaf', apiKey: 'contacto_gral' },
-            { id: 'pago_deuda', label: '🅿️ago: Auto, Agua, Inmueble', type: 'submenu' }
+            { id: 'pago_deuda', label: '🅿️ago: Auto, Agua, Inmueble', type: 'submenu' },
+            { id: 'contacto_op', label: '☎️ Hablar con Operador', type: 'leaf', apiKey: 'contacto_gral' }
         ]
     },
     cultura: {
         title: () => '🎭 Agenda Cultural:',
         options: [
             { id: 'ag_actual', label: '📅 Agenda del Mes (FEBRERO)', type: 'leaf', apiKey: 'agenda_actual' },
-            { id: 'ag_drive', label: '📂 Ver programación anual (Drive)', link: 'https://drive.google.com/drive/folders/1VgidPwJ_Hg-n_ECGj5KzLlM-58OEdJBP' }
         ]
     },
     turismo: {
