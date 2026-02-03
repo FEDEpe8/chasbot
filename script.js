@@ -8,7 +8,15 @@ let formData = { tipo: "", ubicacion: "", descripcion: "" };
 /* --- MENÚS --- */
 const MENUS = {
     main: { 
-        title: (name) => `¡Hola <b>${name}</b>! 👋 Soy Julián el asistente virtual de Municipalidad de Chascomús. ¿Empecemos la recorrida?`, 
+        title: (name) => `¡Hola <b>${name}</b>! 👋 ¡Hola! Soy EVA, tu asistente virtual de la Municipalidad de Chascomús. 🏛️
+
+Estoy aquí para ayudarte a resolver tus dudas de forma rápida. ¿Qué necesitás consultar hoy?
+Salud 🏥
+Seguridad 🚔
+Habitat 🏡
+Trámites y Turnos 📅
+Elegi una opcion o una palabra clave."?`, 
+        
         options: [
             { id: 'politicas_gen', label: '💜 GÉNERO (Urgencias)', type: 'leaf', apiKey: 'politicas_gen' },
             { id: 'politicas_comu', label: '🛍️ Módulos (alimentos)', type: 'leaf', apiKey: 'asistencia_social' },
