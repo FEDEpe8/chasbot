@@ -454,7 +454,7 @@ const RES = {
         </div>
 
         <br>
-        <a href="https://wa.me/5492241559397" target="_blank" class="wa-btn" style="background-color: #d35400 !important;">
+        <a href="https://wa.me/5492241530478" target="_blank" class="wa-btn" style="background-color: #d35400 !important;">
             📲 Consultar Cronograma (WhatsApp)
         </a>
     </div>`,
