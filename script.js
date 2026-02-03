@@ -225,7 +225,7 @@ const RES = {
         <a href="https://wa.me/5492241603414" style="color:#25D366; font-weight:bold; text-decoration:none;">💬 2241-603414 (Clic aquí)</a><br><br>
         🔗 <b>Linktree Inscripciones:</b><br>
         <a href="https://linktr.ee/visitasguiadas.turismoch" target="_blank">Ingresar al Linktree</a>
-    </div>`, 
+    </div>`,
 
     'omic_info': `
     <div class="info-card">
@@ -311,18 +311,22 @@ const RES = {
         🏢 <b>Sede Zoonosis:</b> Mendoza 95.
     </div>`,
 
-  'vacunacion_info': `
-    <div class="info-card">
-        <strong>💉 Vacunación</strong><br><br>
-        🏥 <b>Hospital San Vicente de Paul:</b><br>
+ 'vacunacion_info': `
+    <div class="info-card" style="line-height: 1.5; padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+        <strong style="font-size: 1.1em;">💉 Vacunación</strong><br><br>
+        
+        <b>🏥 Hospital San Vicente de Paul:</b><br>
         Vacunatorio central. Prioridad: Niños (6m a 2a), gestantes y puérperas.<br><br>
-        🏠 <b>Puntos Barriales:</b><br>
-        CIC "Dr. Quintín" (30 de Mayo) y otros CAPS.<br><br>
-        📋 <b>Info Importante:</b><br>
-        • <b>Demanda espontánea</b> (No requiere orden médica).<br>
+        
+        <b>🏠 Puntos Barriales:</b><br>
+        CIC "Dr. Quintín" (B° 30 de Mayo) y centros de salud (CAPS).<br><br>
+        
+        <b>📋 Información Importante:</b><br>
+        • <b>Demanda espontánea:</b> No requiere orden médica.<br>
         • <b>Requisitos:</b> Llevar DNI y Libreta de Vacunación.<br><br>
-        📱 <i>Consultá las redes de "Secretaría de Salud Chascomús" para horarios actualizados.</i>
-    </div>`,
+        
+        <small><i>📱 Consultá las redes de "Secretaría de Salud Chascomús" para horarios actualizados.</i></small>
+    </div>`
     
   'info_habitat': `
     <div class="info-card">
