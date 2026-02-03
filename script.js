@@ -227,8 +227,7 @@ const RES = {
         <a href="https://wa.me/5492241603414" style="color:#25D366; font-weight:bold; text-decoration:none;">💬 2241-603414 (Clic aquí)</a><br><br>
         🔗 <b>Linktree Inscripciones:</b><br>
         <a href="https://linktr.ee/visitasguiadas.turismoch" target="_blank">Ingresar al Linktree</a>
-    </div>`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles."; 
+    </div>`, 
     
     'omic_info': `
     <div class="info-card">
@@ -240,7 +239,7 @@ const RES = {
         ⏰ <b>Horario:</b> Lunes a Viernes de 8:00 a 13:00 hs.<br>
         📞 <b>Teléfonos:</b> 43-1287 / 42-5558
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+        
     'caps_wa': `
     <div class="info-card">
         <strong>📞 WhatsApp de los CAPS:</strong><br><br>
@@ -253,7 +252,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         🟢 <b>La Noria:</b> <a href="https://wa.me/5492241604872">2241-604872</a><br>
         🟢 <b>San Cayetano:</b> <a href="https://wa.me/5492241511430">2241-511430</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'link_147': `
     <div class="info-card">
         <strong>📝 ATENCIÓN AL VECINO 147</strong><br><br>
@@ -267,7 +266,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         📋 <b>Datos necesarios:</b><br>
         Nombre, DNI, Teléfono y Dirección del problema.
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'caps_mapas': `
     <div class="info-card">
         <strong>📍 Ubicaciones CAPS (Toque para ver mapa):</strong><br><br>
@@ -280,7 +279,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         • <a href="https://www.google.com/maps/search/?api=1&query=CAPS+La+Noria+Chascomus" target="_blank">La Noria</a> (Grito de Dolores)<br>
         • <a href="https://www.google.com/maps/search/?api=1&query=CAPS+San+Cayetano+Chascomus" target="_blank">San Cayetano</a> (Gabino Ezeiza)
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'farmacias_lista': `
     <div class="info-card">
         <strong>📍 Farmacias en Chascomús:</strong><br><br>
@@ -302,7 +301,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         • <b>Puyssegur:</b> Libres del Sur 946<br><br>
         💊 <a href="https://www.turnofarma.com/turnos/ar/ba/chascomus" target="_blank" class="wa-btn" style="background:#2ecc71 !important;">VER FARMACIAS DE TURNO</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+        
     'zoo_rabia': `
     <div class="info-card" style="border-left: 5px solid #f1c40f;">
         <strong style="color:#d35400;">🐾 Quirófano Móvil (Castración)</strong><br><br>
@@ -313,7 +312,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         🐕 <b>Requisito:</b> Llevar la mascota con collar, correa y/o transportadora.<br><br>
         🏢 <b>Sede Zoonosis:</b> Mendoza 95.
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'vacunacion_info': `
     <div class="info-card">
         <strong>💉 Vacunación</strong><br><br>
@@ -325,8 +324,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         • <b>Demanda espontánea</b> (No requiere orden médica).<br>
         • <b>Requisitos:</b> Llevar DNI y Libreta de Vacunación.<br><br>
         📱 <i>Consultá las redes de "Secretaría de Salud Chascomús" para horarios actualizados.</i>
-    </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    </div>', 
     'info_habitat': `
     <div class="info-card">
         <strong>🔑 Info de Hábitat</strong><br>
@@ -335,7 +333,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         • Gestión de Tierras y Catastro.<br><br>
         👇 <b>Seleccioná una opción:</b>
     </div>`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
     'habitat_info': `
     <div class="info-card">
         <strong>📍 Dirección y contacto</strong><br>
@@ -347,7 +345,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
             📍 Dorrego y Bolivar (Ex IOMA)
         </a>
        </div>`,
-     const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";  
+       
     'habitat_planes': `
     <div class="info-card">
         <strong>🏘️ Planes Habitacionales</strong><br>
@@ -360,20 +358,20 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         🔗 Planes Habitacionales
         </a>
     </div>`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
         'mediacion_info': `<div class="info-card"><strong>⚖️ Mediación Comunitaria</strong><br>Resolución pacífica y gratuita de conflictos vecinales (ruidos, mascotas, edilicios).<br>📍 <b>Acercate a:</b> Moreno 259.</div>`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
         'uda_info': `<div class="info-card"><strong>📍 Puntos UDA (Atención en Barrios)</strong><br><i>Acercate a tu punto más cercano:</i><br><br>🔹 <b>UDA 1 (San Luis):</b> Chubut 755 (Mar/Vie 9-12).<br>🔹 <b>UDA 2 (San José Obrero):</b> F. Chapa 625 (Mar/Vie 9-12).<br>🔹 <b>UDA 3 (El Porteño):</b> Mansilla y Calle 3 (Vie 9-12).<br>🔹 <b>UDA 4 (30 de Mayo):</b> Bvd. 5 y Calle 2 (Vie 9-12).<br>🔹 <b>UDA 5 (B. Jardín):</b> J. Quintana e/ Misiones (Mar/Mié 9-12).<br>🔹 <b>UDA 6 (Gallo Blanco):</b> EE.UU. y Las Flores (Lun 9-12).<br>🔹 <b>UDA 7 (San Cayetano):</b> Comedor (Mar 9-12).<br>🔹 <b>UDA 8 (Políticas Com.):</b> Sarmiento 42 (Lun-Vie 8-12).<br>🔹 <b>UDA 9 (Iporá):</b> Perú y S. Cabral (Jue 9-12).<br><br>🚨 <b>Guardia 24hs:</b> <a href="https://wa.me/5492241559397">2241-559397</a></div>`,
-   const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+   
         'pamuv': `<div class="info-card" style="border-left: 5px solid #c0392b;"><strong style="color: #c0392b;">🆘 PAMUV (Asistencia a la Víctima)</strong><br><br>Atención, contención y asesoramiento a personas víctimas de delitos o situaciones de violencia.<br><br>🛡️ <b>Plan Integral de Seguridad 2025-2027</b><br><br>🚨 <b>ATENCIÓN 24 HORAS:</b><br>Línea permanente para emergencias o consultas.<br><a href="https://wa.me/5492241514881" class="wa-btn" style="background-color: #c0392b !important;">📞 2241-514881 (WhatsApp)</a></div>`,
-   const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+   
         'defensa_civil': `<div class="info-card" style="border-left: 5px solid #c0392b;">
   <strong style="color: #c0392b;">🌪️ Defensa Civil</strong><br><br>
     🚨 <b>LÍNEA DE EMERGENCIA:</b><br>
     Atención ante temporales, caída de árboles y riesgo en vía pública.<br>
     📞 <a href="tel:103" class="wa-btn" style="background-color: #c0392b !important; text-align:center; display:block;">LLAMAR AL 103</a><br>
     📧 <a href="mailto:defensa.civil@chascomus.gob.ar">Enviar Correo Electrónico</a></div>`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
     'apps_seguridad': `
     <div class="info-card">
         <strong>📲 Aplicaciones de Seguridad y Tránsito</strong><br><br>
@@ -386,26 +384,26 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         Gestioná tu estacionamiento.<br>
         🤖 <a href="https://play.google.com/store/apps/details?id=ar.edu.unlp.sem.mobile" target="_blank" rel="noopener noreferrer">Descargar Android</a><br>
         🍎 <a href="https://apps.apple.com/ar/app/sem-mobile/id1387705895" target="_blank" rel="noopener noreferrer">Descargar iPhone</a></div>`,
-   const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+   
         'turismo_info': `<div class="info-card"><strong>🏖️ Subsecretaría de Turismo</strong><br>📍 Av. Costanera España 25<br>📞 <a href="tel:02241615542">02241 61-5542</a><br>📧 <a href="mailto:turismo@chascomus.gob.ar">Enviar Email</a><br>🔗 <a href="https://linktr.ee/turismoch" target="_blank">Más info en Linktree</a></div>`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
       'deportes_info': `<div class="info-card"><strong>⚽ Dirección de Deportes</strong><br>📍 Av. Costanera España y Av. Lastra<br>📞 <a href="tel:02241424649">(02241) 42 4649</a></div>`,
       'deportes_circuito': `<div class="info-card"><strong>🏃 Circuito de Calle</strong><br>Inscripciones, cronograma y resultados oficiales.<br>🔗 <a href="https://apps.chascomus.gob.ar/deportes/circuitodecalle/" target="_blank">IR A LA WEB</a></div>`,
-  const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+  
       'seg_academia': `<div class="info-card"><strong>🚗 Academia de Conductores</strong><br>Turnos para cursos y exámenes teóricos.<br>🔗 <a href="https://apps.chascomus.gob.ar/academia/" target="_blank">INGRESAR A LA WEB</a></div>`,
-   const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";  
+   
       'seg_medido': `<div class="info-card"><strong>🅿️ Estacionamiento Medido</strong><br>Gestioná tu estacionamiento desde el celular.<br><br>📲 <b>Descargar App:</b><br>🤖 <a href="https://play.google.com/store/apps/details?id=ar.edu.unlp.sem.mobile.chascomus" target="_blank">Android (Google Play)</a><br>🍎 <a href="https://apps.apple.com/ar/app/sem-mobile/id1387705895" target="_blank">iPhone (App Store)</a><br><br>💻 <a href="https://chascomus.gob.ar/estacionamientomedido/" target="_blank">Gestión vía Web</a></div>`,
-   const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+  
      'lic_turno': `<b>📅 Turno Licencia:</b><br>🔗 <a href="https://apps.chascomus.gob.ar/academia/">SOLICITAR TURNO</a>`, 
-   const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+   
     'seg_infracciones': `<b>⚖️ Infracciones:</b><br>🔗 <a href="https://chascomus.gob.ar/municipio/estaticas/consultaInfracciones">VER MIS MULTAS</a>`, 
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
     'ojos': `👁️ <b>Ojos en Alerta:</b> <a href="https://wa.me/5492241557444">2241-557444</a>`,
-   const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+   
     'poli': `📞 <b>Policía:</b> 42-2222 | 🎥 <b>COM:</b> 43-1333`,
     /* --- TARJETA NUEVA: MÓDULOS ALIMENTARIOS (Estilo destacado) --- */
     'politicas_gen': `<div class="info-card" style="border-left: 5px solid #9b59b6;"><strong style="color: #8e44ad; font-size: 1rem;">💜 Género y Diversidad</strong><br><br><div style="font-size: 0.85rem; margin-bottom: 12px;">🚨 <b>Guardia 24/7:</b> Orientación y acompañamiento en casos de violencia.<br>🧠 <b>Equipo Técnico:</b> Abogadas, psicólogas y trabajadoras sociales.<br>🏠 <b>Hogar de Tránsito:</b> Alojamiento temporal para mujeres en riesgo.<br>🗣️ <b>Varones:</b> Espacio de abordaje y deconstrucción de conductas violentas.<br>👮‍♀️ <b>Articulación:</b> Trabajo conjunto con Comisaría de la Mujer.</div><div style="background: #fdf2ff; padding: 10px; border-radius: 8px; font-size: 0.9rem;">📍 <b>Oficina:</b> Moreno 259 (Lun-Vie 9-14hs)<br>☎️ <b>Fijo Oficina:</b> <a href="tel:02241530448">2241-530448</a><br>🚓 <b>Comisaría Mujer:</b> <a href="tel:02241422653">42-2653</a></div><a href="https://wa.me/5492241559397" target="_blank" class="wa-btn" style="background-color: #8e44ad !important;">🚨 GUARDIA 24HS (WhatsApp)</a></div>`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
     'asistencia_social': `
     <div class="info-card" style="border-left: 5px solid #e67e22;">
         <strong style="color: #d35400; font-size: 1rem;">🍎 Módulos Alimentarios (CAM)</strong><br><br>
@@ -432,22 +430,21 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
             📲 Consultar Cronograma (WhatsApp)
         </a>
     </div>`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
     'ninez': `<b>👶 Niñez:</b> Mendoza Nº 95. 📞 43-1146.`,
-   const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
-        'poda': `🌿 <a href="https://apps.chascomus.gob.ar/podaresponsable/solicitud.php">Solicitud Poda</a>`,
-  const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";  
+
+        'poda': `🌿 <a href="https://apps.chascomus.gob.ar/podaresponsable/solicitud.php">Solicitud Poda</a>',  
         'obras_basura': `♻️ <b>Recolección:</b><br>Lun a Sáb 20hs (Húmedos)<br>Jueves 14hs (Reciclables)`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
     'hac_tomasa': `<b>🤖 Hacienda Tomasa:</b><br>Portal de autogestión.<br>🔗 <a href="https://tomasa.chascomus.gob.ar/">INGRESAR</a>`, 
 
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'boleta': `<div class="info-card"><strong>📧 BOLETA DIGITAL</strong><br>🟢 WA: <a href="https://wa.me/5492241559739">2241-559739</a><br>📧 <a href="mailto:ingresospublicos@chascomus.gob.ar">Email</a></div>`,
-  const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+  
         'agua': `<b>💧 Consumo de Agua:</b><br>🔗 <a href="https://apps.chascomus.gob.ar/caudalimetros/consulta.php">VER MI CONSUMO</a>`, 
-   const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+   
             'deuda': `<b>🔍 Consulta de Deuda:</b><br>🔗 <a href="https://chascomus.gob.ar/municipio/estaticas/consultaDeudas">CONSULTAR AQUÍ</a>`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
     'hab_gral': `
     <div class="info-card">
         <strong>🏢 Habilitación Comercial / Industrial</strong><br><br>
@@ -461,7 +458,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         📍 <b>Presencial:</b> Maipú 415 (Producción).<br><br>
         🚀 <a href="https://apps.chascomus.gob.ar/habilitaciones/habilitacionComercial.php" target="_blank" class="wa-btn">INICIAR TRÁMITE ONLINE</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+ 
     'hab_eventos': `
     <div class="info-card">
         <strong>🎉 Eventos y Salones de Fiesta</strong><br>
@@ -473,8 +470,8 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         📧 tecnica_dolores@hotmail.com<br>
         📞 (02245) 44-6107<br><br>
         📝 <a href="https://apps.chascomus.gob.ar/habilitaciones/habilitacionEventoPrivado2.0.php" target="_blank">IR AL FORMULARIO</a>
-    </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    </div>`
+
     'hab_espacio': `
     <div class="info-card">
         <strong>🍔 Uso de Espacio Público</strong><br>
@@ -487,7 +484,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         • Domicilio en Chascomús.<br><br>
         📝 <a href="https://apps.chascomus.gob.ar/habilitaciones/habilitacionCarro.php" target="_blank">SOLICITAR PERMISO</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+ 
   'hab_reba': `
     <div class="info-card">
         <strong>🍷 Registro de Alcohol (REBA)</strong><br><br>
@@ -499,10 +496,10 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         Solicitalo a <a href="mailto:habilitaciones@chascomus.gob.ar">habilitaciones@chascomus.gob.ar</a><br><br>
         🏦 <b>Pago:</b> Recibirás una boleta para abonar en Banco Provincia.
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";    
+
     'h_turnos': `<strong>📅 Turnos Hospital:</strong><br>WhatsApp: <a href="https://wa.me/5492241466977">2241-466977</a>`,
     'h_info': `📍 <b>Hospital Municipal:</b> Av. Alfonsín e Yrigoyen.<br>🚨 Guardia 24 hs.`,
-    const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+    
     /* --- ESPECIALIDADES HOSPITAL (NUEVO ORDEN: Especialidad -> Día) --- */
     'info_pediatria': `
     <div class="info-card">
@@ -512,7 +509,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         👇 <i>Sacá turno por WhatsApp:</i>
         <a href="https://wa.me/5492241466977" target="_blank" class="wa-btn">📅 SOLICITAR TURNO</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'info_clinica': `
     <div class="info-card">
         <strong>🩺 Clínica Médica</strong><br><br>
@@ -520,7 +517,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         👇 <i>Sacá turno por WhatsApp:</i>
         <a href="https://wa.me/5492241466977" target="_blank" class="wa-btn">📅 SOLICITAR TURNO</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'info_gineco': `
     <div class="info-card">
         <strong>🤰 Salud de la Mujer</strong><br><br>
@@ -529,7 +526,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         👇 <i>Sacá turno por WhatsApp:</i>
         <a href="https://wa.me/5492241466977" target="_blank" class="wa-btn">📅 SOLICITAR TURNO</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'info_cardio': `
     <div class="info-card">
         <strong>❤️ Cardiología</strong><br><br>
@@ -537,7 +534,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         👇 <i>Sacá turno por WhatsApp:</i>
         <a href="https://wa.me/5492241466977" target="_blank" class="wa-btn">📅 SOLICITAR TURNO</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'info_trauma': `
     <div class="info-card">
         <strong>🦴 Traumatología</strong><br><br>
@@ -545,7 +542,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         👇 <i>Sacá turno por WhatsApp:</i>
         <a href="https://wa.me/5492241466977" target="_blank" class="wa-btn">📅 SOLICITAR TURNO</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'info_oftalmo': `
     <div class="info-card">
         <strong>👁️ Oftalmología</strong><br><br>
@@ -553,7 +550,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         👇 <i>Sacá turno por WhatsApp:</i>
         <a href="https://wa.me/5492241466977" target="_blank" class="wa-btn">📅 SOLICITAR TURNO</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'info_nutri': `
     <div class="info-card">
         <strong>🍎 Nutrición</strong><br><br>
@@ -561,7 +558,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         👇 <i>Sacá turno por WhatsApp:</i>
         <a href="https://wa.me/5492241466977" target="_blank" class="wa-btn">📅 SOLICITAR TURNO</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'info_cirugia': `
     <div class="info-card">
         <strong>🔪 Cirugía General</strong><br><br>
@@ -569,7 +566,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         👇 <i>Sacá turno por WhatsApp:</i>
         <a href="https://wa.me/5492241466977" target="_blank" class="wa-btn">📅 SOLICITAR TURNO</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'info_neuro_psiq': `
     <div class="info-card">
         <strong>🧠 Salud Mental y Neurología</strong><br><br>
@@ -578,7 +575,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         👇 <i>Sacá turno por WhatsApp:</i>
         <a href="https://wa.me/5492241466977" target="_blank" class="wa-btn">📅 SOLICITAR TURNO</a>
     </div>`,
-  const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";  
+  
     'prod_empleo': `
     <div class="info-card">
         <strong>👷 Oficina de Empleo</strong><br><br>
@@ -590,7 +587,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         📍 <b>Sede:</b> Maipú 415.<br>
         ⏰ <b>Horario:</b> Lun a Vie de 8 a 13 hs.
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
     'prod_emprende': `
     <div class="info-card">
         <strong>🚀 Chascomús Emprende</strong><br><br>
@@ -601,7 +598,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         Fomento al consumo de productos locales.<br><br>
         📧 <b>Consultas:</b> <a href="mailto:produccion@chascomus.gob.ar">produccion@chascomus.gob.ar</a>
     </div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+        
     'prod_contacto': `
     <div class="info-card">
         <strong>🏭 Dirección de Producción</strong><br><br>
@@ -609,7 +606,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
         📞 <b>Teléfono:</b> <a href="tel:02241436365">43-6365</a><br>
         📧 <b>Email:</b> <a href="mailto:produccion@chascomus.gob.ar">produccion@chascomus.gob.ar</a><br><br>
         ⏰ <b>Atención:</b> Lunes a Viernes de 8:00 a 13:30 hs.</div>`,
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
         'contacto_gral': `<div class="info-card">
     <strong>🏛️ Contacto Municipalidad</strong><br>
     <i>Canales de atención directa:</i><br><br>
@@ -623,7 +620,7 @@ const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Nec
     
     📍 <b>Mesa de Entradas:</b><br>
     Cr. Cramer 270.</div>`
-const PIE_MENU = "\n\n━━━━━━━━━━━━━━━\n💡 *¿Necesitás algo más?*\nEscribí *MENU* para ver las opciones disponibles.";
+
 };
 
 /* --- LÓGICA DE INTERFAZ Y NAVEGACIÓN --- */
