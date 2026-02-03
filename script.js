@@ -611,7 +611,7 @@ const RES = {
         📋 <b>Requisitos para inscripción:</b><br>
         Tener foto de: AFIP, ARBA, Habilitación Municipal y DNI.<br><br>
         👇 <i>Completá el formulario y la Dirección de Producción te contactará:</i><br>
-        <a href="#https://docs.google.com/forms/d/e/1FAIpQLSfa4LPccR6dYwkQFWhG31HELnaKMCSgUF7Jqy1xfiSNR_fA_g/viewform" target="_blank" class="wa-btn">📝 FORMULARIO DE INSCRIPCIÓN</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfa4LPccR6dYwkQFWhG31HELnaKMCSgUF7Jqy1xfiSNR_fA_g/viewform" target="_blank" class="wa-btn">📝 FORMULARIO DE INSCRIPCIÓN</a>
     </div>`,
 
     'res_prod_frescos': `
@@ -619,7 +619,7 @@ const RES = {
         <strong>🥦 Orientación Productores Alimentos Frescos</strong><br><br>
         Para productores de alimentos agroecológicos, agricultura familiar, cooperativas y PyMEs de Chascomús.<br><br>
         <i>Acompañamos el desarrollo de tu unidad económica.</i><br><br>
-        <a href="#https://docs.google.com/forms/d/e/1FAIpQLSeMzImHt14uXF4ZSk3wiJEqfxK4U2Tw9bSJrJXaKGLv5kLGew/closedform" target="_blank" class="wa-btn">📝 FORMULARIO PRODUCTORES</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMzImHt14uXF4ZSk3wiJEqfxK4U2Tw9bSJrJXaKGLv5kLGew/closedform" target="_blank" class="wa-btn">📝 FORMULARIO PRODUCTORES</a>
     </div>`,
 
     /* 🔵 OFICINA DE EMPLEO */
@@ -629,7 +629,7 @@ const RES = {
         Para mayores de 18 años residentes en Chascomús en búsqueda activa.<br><br>
         1. Completá el formulario con tus datos y perfil.<br>
         2. Te contactaremos (Lun a Vie 8 a 14hs) para una entrevista y asesoramiento.<br><br>
-        <a href="#https://docs.google.com/forms/d/e/1FAIpQLSfl7uzaIU0u8G-S3uTjtddZl7y4o5jajZUzNuftZEyfqPdDKg/viewform" target="_blank" class="wa-btn">📝 CARGAR MI CV / DATOS</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfl7uzaIU0u8G-S3uTjtddZl7y4o5jajZUzNuftZEyfqPdDKg/viewform" target="_blank" class="wa-btn">📝 CARGAR MI CV / DATOS</a>
     </div>`,
 
     'res_oe_promover': `
@@ -637,7 +637,7 @@ const RES = {
         <strong>♿ Programa Nacional Promover</strong><br><br>
         Para mayores de 18 años desempleados que posean <b>Certificado Único de Discapacidad (CUD)</b>.<br><br>
         Ofrece formación, capacitación y acompañamiento en el perfil laboral.<br><br>
-        <a href="#https://docs.google.com/forms/d/e/1FAIpQLSdGoPi4Xmg0zD2VtBzTr1sFol1QtLAM5G0oDA6vExM_cvIYbQ/viewform" target="_blank" class="wa-btn">📝 INSCRIPCIÓN PROMOVER</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGoPi4Xmg0zD2VtBzTr1sFol1QtLAM5G0oDA6vExM_cvIYbQ/viewform" target="_blank" class="wa-btn">📝 INSCRIPCIÓN PROMOVER</a>
     </div>`,
 
     'res_oe_taller_cv': `
@@ -645,7 +645,7 @@ const RES = {
         <strong>📄 Armado de CV y Búsqueda de Empleo</strong><br><br>
         ¿No sabés por dónde empezar a buscar trabajo? ¿Querés mejorar tu Currículum?<br><br>
         Te ofrecemos información y estrategias para tener la mejor herramienta de presentación.<br><br>
-        <a href="#https://docs.google.com/forms/d/e/1FAIpQLSdQkEPZZx7gXZXO9vAb7u3Klxj8g5cwSe1fXqz6Zmo4jjMNBg/viewform" target="_blank" class="wa-btn">📝 INSCRIBIRSE AL TALLER</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQkEPZZx7gXZXO9vAb7u3Klxj8g5cwSe1fXqz6Zmo4jjMNBg/viewform" target="_blank" class="wa-btn">📝 INSCRIBIRSE AL TALLER</a>
     </div>`,
 
     /* 🟠 EMPRESAS */
@@ -655,7 +655,7 @@ const RES = {
         <strong>🚀 Programa Chascomús Emprende</strong><br><br>
         Objetivo: Fortalecer y acompañar unidades productivas.<br><br>
         Al completar el formulario, ingresás al listado para coordinar una entrevista de diagnóstico y orientación.<br><br>
-        <a href="#https://uploads.chascomus.gob.ar/produccion/PROGRAMA%20CHASCOMUS%20EMPRENDE.pdf" target="_blank" class="wa-btn">📝 INSCRIPCIÓN EMPRENDEDORES</a>
+        <a href="https://uploads.chascomus.gob.ar/produccion/PROGRAMA%20CHASCOMUS%20EMPRENDE.pdf" target="_blank" class="wa-btn">📝 INSCRIPCIÓN EMPRENDEDORES</a>
     </div>`,
 
     /* 🟣 EMPLEADORES */
@@ -664,14 +664,14 @@ const RES = {
         <strong>🔎 Búsqueda de Personal</strong><br><br>
         Si sos empleador, completá el formulario describiendo el puesto.<br><br>
         ✅ La Dirección de Producción realizará una preselección y te presentará una <b>terna final de candidatos</b>.<br><br>
-        <a href="#https://docs.google.com/forms/d/e/1FAIpQLSdOeVRsshYtc8JF-sTXyEqQgJl2hyTbxyfDPb0G7SsiGBMj_g/viewform" target="_blank" class="wa-btn">📝 PUBLICAR PUESTO</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOeVRsshYtc8JF-sTXyEqQgJl2hyTbxyfDPb0G7SsiGBMj_g/viewform" target="_blank" class="wa-btn">📝 PUBLICAR PUESTO</a>
     </div>`,
 
     'res_empl_madrinas': `
     <div class="info-card">
         <strong>🤝 Programa Formando Red - Empresas Madrinas</strong><br><br>
         Vinculamos empresas con compromiso social que deseen capacitar a futuros trabajadores, favoreciendo la igualdad de oportunidades.<br><br>
-        <a href="#https://docs.google.com/forms/d/e/1FAIpQLSe7SA_eKKQw-EDuFU9pDBIE_nUjzLOX6AZrHI_KfO3bwufVSA/viewform" target="_blank" class="wa-btn">📝 QUIERO SER EMPRESA MADRINA</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7SA_eKKQw-EDuFU9pDBIE_nUjzLOX6AZrHI_KfO3bwufVSA/viewform" target="_blank" class="wa-btn">📝 QUIERO SER EMPRESA MADRINA</a>
     </div>`,
 
     /* 🔴 MANIPULACIÓN */
@@ -682,7 +682,7 @@ const RES = {
         ✅ <b>Validez:</b> 3 años (Nacional).<br>
         🎓 <b>Requisito:</b> Aprobar el Curso de Manipulación Segura.<br><br>
         <i>Modalidad presencial (y próximamente virtual).</i><br><br>
-        <a href="#https://docs.google.com/forms/d/e/1FAIpQLSctX7eGQxBNei5howcIjXhIzlBTKQQb_RIBImnKXjVPvIVrvw/closedform" target="_blank" class="wa-btn">📝 INSCRIPCIÓN AL CURSO</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSctX7eGQxBNei5howcIjXhIzlBTKQQb_RIBImnKXjVPvIVrvw/closedform" target="_blank" class="wa-btn">📝 INSCRIPCIÓN AL CURSO</a>
     </div>`,
 
         'contacto_gral': `<div class="info-card">
