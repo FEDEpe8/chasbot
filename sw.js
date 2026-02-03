@@ -1,9 +1,11 @@
-const CACHE_NAME = 'muni-chascomus-v44'; // <--- Siempre actualizar si se cambia el index a una version +
+const CACHE_NAME = 'muni-chascomus-v45'; // <--- Subí la versión para forzar actualización
 const assets = [
   './',
   './index.html',
   './manifest.json',
-  './logo.png' // O logo.jpg si es el que usás
+  './logo.png',
+  './style.css',  // FALTABA ESTO
+  './script.js'   // FALTABA ESTO
 ];
 
 self.addEventListener('install', event => {
