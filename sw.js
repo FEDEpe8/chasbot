@@ -1,11 +1,11 @@
-const CACHE_NAME = 'muni-chascomus-v58'; // <--- Subí la versión para forzar actualización
+const CACHE_NAME = 'muni-chascomus-v57';
 const assets = [
   './',
   './index.html',
   './manifest.json',
   './logo.png',
-  './style.css',  // FALTABA ESTO
-  './script.js'   // FALTABA ESTO
+  './style.css',
+  './script.js'
 ];
 
 self.addEventListener('install', event => {
@@ -37,3 +37,4 @@ self.addEventListener('fetch', event => {
       .then(response => response || fetch(event.request))
   );
 });
+
