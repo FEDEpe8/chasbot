@@ -2,30 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover, interactive-widget=resizes-content">
     <title>MuniBot Chascomús - Asistente Virtual</title>
     <meta name="theme-color" content="#004a7c">
     <meta name="description" content="Asistente Virtual Oficial de la Municipalidad de Chascomús. Información sobre trámites, salud, seguridad y servicios.">
     <meta name="author" content="Municipalidad de Chascomús - Área de Sistemas">
     <meta name="copyright" content="© 2026 Municipalidad de Chascomús">
     
-    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="apple-touch-icon" href="logo.png">
     
-    <!-- Preconnect para performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     
-    <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Seguridad: CSP básico -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://wa.me; frame-src https://www.google.com;">
 </head>
 <body>
-    <!-- Header -->
     <header class="app-header">
         <div class="header-brand">
             <img src="logo.png" alt="Logo Municipalidad" class="header-logo" loading="eager">
@@ -52,19 +45,15 @@
         </div>
     </header>
 
-    <!-- Área principal de chat -->
     <main id="chatContainer" class="chat-container" role="log" aria-live="polite" aria-label="Conversación con MuniBot">
-        <!-- Los mensajes se insertan aquí dinámicamente -->
-    </main>
+        </main>
 
-    <!-- Indicador de escritura -->
     <div id="typingIndicator" class="typing-indicator hidden">
         <span></span>
         <span></span>
         <span></span>
     </div>
 
-    <!-- Barra de input -->
     <footer class="input-area" id="inputBar">
         <div class="input-wrapper">
             <input 
@@ -84,7 +73,6 @@
         </div>
     </footer>
 
-    <!-- Modal de información -->
     <div id="infoModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
         <div class="modal-content">
             <button class="modal-close" onclick="app.toggleInfo()" aria-label="Cerrar">×</button>
@@ -95,16 +83,15 @@
             </div>
             <div class="modal-footer">
                 <p class="copyright">© 2026 Municipalidad de Chascomús
-                Federico de Sistemas</p>
+                    Federico de Sistemas
+                </p>
                 <p class="credit" id="authorCredit"></p>
             </div>
         </div>
     </div>
 
-    <!-- Toast notifications -->
     <div id="toastContainer" class="toast-container"></div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
