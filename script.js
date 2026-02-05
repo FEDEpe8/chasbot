@@ -803,8 +803,8 @@ function handleAction(opt) {
 
     if (opt.id === 'nav_home') return resetToMain();
     // ... resto del código ...
-}
-{
+
+
         if (currentPath.length > 1) {
             currentPath.pop();
             showMenu(currentPath[currentPath.length - 1]);
@@ -942,8 +942,6 @@ function processInput() {
 
     const texto = val.toLowerCase();
     // ... resto del código ...
-}
-    const texto = val.toLowerCase();
 
     /* --- 🔒 COMANDO SECRETO DE AUTOR --- */
     if (texto === 'autor' || texto === 'creador') {
@@ -1137,7 +1135,7 @@ const app = {
 };
 /* --- ESTADÍSTICAS --- */
 // Pega aquí la URL que copiaste del Apps Script
-const STATS_URL = "https://script.google.com/macros/s/TUS_LETRAS_RARAS_AQUI/exec";
+const STATS_URL = "https://script.google.com/macros/s/AKfycbyv6W175qMpbqVUsg0ETM2SOtkdUPsoAUHG3XnaiIjgMFmEnDr7FeVGcyr9dl9AfHB0/exec";
 
 function registrarEvento(accion, detalle) {
     if (!STATS_URL) return;
