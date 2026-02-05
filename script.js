@@ -515,9 +515,9 @@ const RES = {
 
     'boleta': `<div class="info-card"><strong>📧 BOLETA DIGITAL</strong><br>🟢 <i>Para inscribirse comomunicarce por estas vias</a><br> 
     📲: <a href="https://wa.me/5492241557616">2241-557616</a><br>📧 <a href="mailto:ingresospublicos@chascomus.gob.ar">Email</a></div>`,
-    'agua': `<div class="info-card"><strong>💧 Consumo de Agua:</b><br> ℹ️ Para conocer y pagar su consumo ingrese a este Link</b><br>
+    'agua': `<div class="info-card"><strong>💧 CONSUMO de AGUA</strong><br>ℹ️ Para conocer y pagar su consumo ingrese a este Link</b><br>
     🔗 <a href="https://apps.chascomus.gob.ar/caudalimetros/consulta.php">VER MI CONSUMO</a>`, 
-    'deuda': `<div class="info-card"><strong>🔍 Consulta de Deuda:</b><br>💸 Para ver sus inpuesto Inmobiliarios, Automotores, etc;.<br>
+    'deuda': `<div class="info-card"><strong>🔍 CONSULTA de DEUDA</strong><br>💸 Para ver sus inpuesto Inmobiliarios, Automotores, etc;.<br>
     🔗 <a href="https://chascomus.gob.ar/municipio/estaticas/consultaDeudas">CONSULTAR AQUÍ</a>`,
     
     'hab_gral': `
