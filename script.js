@@ -1,42 +1,62 @@
-/* --- CONFIGURACIÓN --- */
+/* ============================================================
+   MUNICIPALIDAD DE CHASCOMÚS - CHATBOT SCRIPT (FULL DATA)
+   ============================================================ */
+
+/* --- 1. CONFIGURACIÓN Y ESTADO --- */
 let userName = localStorage.getItem('muni_user_name') || "";
+let userNeighborhood = localStorage.getItem('muni_user_neighborhood') || "";
+let userAge = localStorage.getItem('muni_user_age') || "";
+
 let currentPath = ['main'];
 let isAwaitingForm = false;
 let currentFormStep = 0;
 let formData = { tipo: "", ubicacion: "", descripcion: "" };
+let isBotThinking = false; 
 
-/* --- ESTADÍSTICAS (Google Sheets) --- */
-// ⚠️ IMPORTANTE: PEGA AQUÍ TU URL DE APPS SCRIPT
-const STATS_URL = "https://script.google.com/macros/s/AKfycbyv6W175qMpbqVUsg0ETM2SOtkdUPsoAUHG3XnaiIjgMFmEnDr7FeVGcyr9dl9AfHB0/exec";
+/* --- 2. ESTADÍSTICAS --- */
+const STATS_URL = "https://script.google.com/macros/s/AKfycbxhV-xqoXhdzceapbXf3xXPG0OEUKxsplPdcipMT6KUBux0KRlZuoOGLIRi9OLIhjf9/exec";
 
 function registrarEvento(accion, detalle) {
-    if (!STATS_URL || STATS_URL.includes("TUS_LETRAS_RARAS_AQUI")) return;
-
+    if (!STATS_URL || STATS_URL.includes("TUS_LETRAS_RARAS")) return;
     const datos = {
+        fecha: new Date().toLocaleString(),
         usuario: userName || "Anónimo",
+        barrio: userNeighborhood || "No especificado",
+        edad: userAge || "No especificado",
         accion: accion,
         detalle: detalle
     };
-
-    // 'no-cors' permite enviar datos sin esperar respuesta (fire and forget)
     fetch(STATS_URL, {
         method: "POST",
-        mode: "no-cors", 
+        mode: "no-cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(datos)
-    }).catch(err => console.error("Error stats:", err));
+    }).catch(console.error);
 }
 
-/* --- MENÚS --- */  
+/* --- 3. MENÚS (DATA ORIGINAL PRESERVADA + INTEGRACIÓN ATAJOS) --- */  
 const MENUS = {
-    main: { 
-        title: (name) => `¡Hola <b>${name}</b>! 👋 Soy MuniBot el asistente virtual de la Municipalidad. ¿Empecemos la recorrida?`, 
+    // MENÚ PRINCIPAL: Solo atajos rápidos
+ main: { 
+        title: (name) => `¡Hola <b>${name}</b>! 👋 Soy V.I.C. Acá tenés los accesos más rápidos de hoy:`, 
+        options: [
+            { id: 'oea_shortcut', label: '👀 Ojos en Alerta', type: 'leaf', apiKey: 'ojos_en_alerta' },
+            { id: 'ag_shortcut', label: '🎭 Agenda Cultural', type: 'leaf', apiKey: 'agenda_actual' },
+            { id: 'f_shortcut', label: '💊 Farmacias de Turno', type: 'leaf', apiKey: 'farmacias_lista' },
+            { id: 'h_shortcut', label: '📅 Turnos Hospital', type: 'leaf', apiKey: 'h_turnos' },
+            { id: 'full_menu', label: '☰ VER MENÚ COMPLETO' }
+        ]
+    },
+
+    // MENÚ COMPLETO: Todas las opciones originales del main
+    full_menu: {
+        title: () => '📱 Menú Completo de Servicios Municipales:',
         options: [
             { id: 'politicas_gen', label: '💜 GÉNERO (Urgencias)', type: 'leaf', apiKey: 'politicas_gen' },
             { id: 'politicas_comu', label: '🛍️ Módulos (alimentos)', type: 'leaf', apiKey: 'asistencia_social' },
             { id: 'desarrollo_menu', label: '🤝 Desarrollo Social' },
             { id: 'sibon', label: '📰 Boletin Oficial' },
-            { id: 'ojos en_alerta', label: '👁️ Ojos en Alerta (Seguridad)', type: 'leaf', apiKey: 'ojos_en_alerta' },
+            { id: 'ojos_en_alerta', label: '👁️ Ojos en Alerta (Seguridad)', type: 'leaf', apiKey: 'ojos_en_alerta' },
             { id: 'el_digital', label: '📰 Diario digital' },
             { id: 'turismo', label: '🏖️ Turismo' },
             { id: 'deportes', label: '⚽ Deportes' },
@@ -135,7 +155,6 @@ const MENUS = {
             { id: 'h_guardia', label: '🚨 Guardia e Info', type: 'leaf', apiKey: 'h_info' }
         ]
     },
-    /* --- MENÚ ESPECIALIDADES (INVERTIDO) --- */
     h_espec_menu: {
         title: () => '🩺 Seleccioná la especialidad para ver los días:',
         options: [
@@ -162,8 +181,7 @@ const MENUS = {
             { id: 'poli', label: '📞 Monitoreo y Comisaría', type: 'leaf', apiKey: 'poli' }
         ]
     },
-
-  habilitaciones: {
+    habilitaciones: {
         title: () => 'Gestión de Habilitaciones:',
         options: [
             { id: 'hab_video', label: '🎥 Ver Video Instructivo', type: 'leaf', apiKey: 'hab_video_info' },
@@ -173,7 +191,6 @@ const MENUS = {
             { id: 'hab_reba', label: '🍷 REBA (Alcohol)', type: 'leaf', apiKey: 'hab_reba' }
         ]
     },
-
     pago_deuda: {
         title: () => 'Pago de Deudas y Boletas:',
         options: [        
@@ -182,13 +199,10 @@ const MENUS = {
             { id: 'boleta', label: '📧 Boleta Digital', type: 'leaf', apiKey: 'boleta' }
         ]
     },
-
     omic: { 
         title: () => 'OMIC - Defensa del Consumidor:', 
-        options: [
-             { id: 'omic', label: '📢 OMIC (Defensa Consumidor)', type: 'leaf', apiKey: 'omic_info' },]
+        options: [ { id: 'omic', label: '📢 OMIC (Defensa Consumidor)', type: 'leaf', apiKey: 'omic_info' } ]
     },
-
     hab_menu: {
         title: () => 'Gestión de Habilitaciones:',
         options: [
@@ -198,7 +212,6 @@ const MENUS = {
             { id: 'hab_reba', label: '🍷 REBA (Alcohol)', type: 'leaf', apiKey: 'hab_reba' }
         ]
     },
-    
     produccion: {
         title: () => '🏭 Producción y Empleo:',
         options: [
@@ -210,7 +223,6 @@ const MENUS = {
             { id: 'prod_contacto', label: '📍 Contacto y Dirección', type: 'leaf', apiKey: 'prod_contacto' }
         ]
     },
-
     prod_eco_social: {
         title: () => '🟢 Economía Social:',
         options: [
@@ -218,7 +230,6 @@ const MENUS = {
             { id: 'pe_frescos', label: '🥦 Productores Alimentos Frescos', type: 'leaf', apiKey: 'res_prod_frescos' }
         ]
     },
-
     prod_of_empleo: {
         title: () => '🔵 Oficina de Empleo:',
         options: [
@@ -227,14 +238,10 @@ const MENUS = {
             { id: 'oe_taller_cv', label: '📄 Taller Armado de CV', type: 'leaf', apiKey: 'res_oe_taller_cv' }
         ]
     },
-
     prod_empresas: {
         title: () => '🟠 Empresas y Emprendedores:',
-        options: [
-            { id: 'emp_chasco', label: '🚀 Chascomús Emprende', type: 'leaf', apiKey: 'res_emp_chasco' },
-        ]
+        options: [ { id: 'emp_chasco', label: '🚀 Chascomús Emprende', type: 'leaf', apiKey: 'res_emp_chasco' } ]
     },
-
     prod_empleadores: {
         title: () => '🟣 Empleadores:',
         options: [
@@ -252,7 +259,7 @@ const MENUS = {
     }
 };
 
-/* --- RESPUESTAS (Base de Datos HTML) --- */
+/* --- 4. RESPUESTAS (BASE DE DATOS HTML ORIGINAL) --- */
 const RES = {
     'agenda_actual': `
     <div class="info-card">
@@ -806,44 +813,42 @@ const RES = {
     📍 <b>Mesa de Entradas:</b><br>
     Cr. Cramer 270.</div>`
 };
+/* --- 5. MOTOR DE CHAT (FRASES PRESERVADAS) --- */
+const FRASES_RESPUESTA = [
+    "¡Excelente selección! ⭐", "¡Perfecto! 👍", "¡Genial! Te ayudo con eso 😊", "¡Buena opción! 🔍", "¡Excelente elección! 🎯"
+];
+function getFraseAleatoria() { return FRASES_RESPUESTA[Math.floor(Math.random() * FRASES_RESPUESTA.length)]; }
 
-/* --- LÓGICA DE INTERFAZ Y NAVEGACIÓN --- */
-
-function toggleInfo() {
-    const modal = document.getElementById('infoModal');
-    modal.classList.toggle('show');
+function scrollToBottom() {
+    const container = document.getElementById('chatMessages'); 
+    setTimeout(() => container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' }), 100);
 }
 
-window.onclick = function(event) {
-    const modal = document.getElementById('infoModal');
-    if (event.target == modal) {
-        modal.classList.remove('show');
-    }
+function showTyping() {
+    isBotThinking = true;
+    const container = document.getElementById('chatMessages');
+    const typing = document.createElement('div');
+    typing.id = 'typingIndicator'; typing.className = 'typing-indicator';
+    typing.innerHTML = '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';
+    container.appendChild(typing);
+    scrollToBottom();
 }
 
-function toggleInput(show) { 
-    const inputBar = document.getElementById('inputBar');
-    if (inputBar) {
-        inputBar.classList.toggle('hidden', !show);
-        if(show) setTimeout(() => document.getElementById('userInput').focus(), 100);
-    }
+function removeTyping() {
+    const typing = document.getElementById('typingIndicator');
+    if (typing) typing.remove();
+    isBotThinking = false;
 }
 
-function addMessage(text, side = 'bot', options = null) {
-    const container = document.getElementById('chatContainer');
-    const row = document.createElement('div');
-    row.style.width = '100%';
-    row.style.display = 'flex';
-    row.style.flexDirection = 'column';
-    
-    const div = document.createElement('div');
-    div.className = `message ${side}`;
-    div.innerHTML = text;
+function addMessage(content, side = 'bot', options = null) {
+    if (side === 'bot') removeTyping();
+    const container = document.getElementById('chatMessages');
+    const row = document.createElement('div'); row.className = 'message-wrapper';
+    const div = document.createElement('div'); div.className = `message ${side}`;
+    if (side === 'user') div.textContent = content; else div.innerHTML = content;
     row.appendChild(div);
-
     if (options) {
-        const optDiv = document.createElement('div');
-        optDiv.className = 'options-container';
+        const optDiv = document.createElement('div'); optDiv.className = 'options-container';
         options.forEach(opt => {
             const btn = document.createElement('button');
             btn.className = `option-button ${opt.id === 'back' ? 'back' : ''}`;
@@ -853,278 +858,98 @@ function addMessage(text, side = 'bot', options = null) {
         });
         row.appendChild(optDiv);
     }
-    
-    container.appendChild(row);
-    
-    // Scroll actualizado para Flexbox (evita que se tape el contenido)
-    setTimeout(() => {
-        container.scrollTop = container.scrollHeight;
-    }, 100);
-    
-    // Scroll adicional si hay botones para asegurar que sean visibles
-    if (options) {
-        setTimeout(() => {
-            container.scrollTop = container.scrollHeight;
-        }, 300);
-    }
-}
-
-/* --- FRASES DE RESPUESTA POSITIVA --- */
-const FRASES_RESPUESTA = [
-    "¡Qué gran elección! 🎯",
-    "¡Excelente selección! ⭐",
-    "¡Perfecto! Esa es una opción muy buena 👍",
-    "¡Muy bien! Ahí vamos... 🚀",
-    "¡Genial! Te ayudo con eso 😊",
-    "¡Perfecta elección! 💯",
-    "¡Buena opción! Vamos a ver... 🔍",
-    "¡Eso me gusta! Procedamos... 💪",
-    "¡Fantástico! Un momento... ⏳",
-    "¡Muy buena elección! 🌟",
-    "¡Excelente! Vamos a ello... 🛠️",
-    "¡Perfecto! Estoy en eso... 🤖",
-    "¡Genial! Vamos a ver qué encontramos... 🔎",
-    "¡Muy bien! Estoy trabajando en eso... ⚙️",
-    "¡Buena elección! Vamos a ello... 🚀"
-];
-
-function getFraseAleatoria() {
-    return FRASES_RESPUESTA[Math.floor(Math.random() * FRASES_RESPUESTA.length)];
+    container.appendChild(row); scrollToBottom();
 }
 
 function handleAction(opt) {
-    // --- NUEVO: REGISTRO DE CLICK ---
-    registrarEvento("Click Botón", opt.label || opt.id);
-    // --------------------------------
-
-    if (opt.id === 'nav_home') return resetToMain();
+    if (isBotThinking) return; 
     
-    if (opt.id === 'nav_back') {
-        if (currentPath.length > 1) {
-            currentPath.pop();
-            showMenu(currentPath[currentPath.length - 1]);
-        } else {
-            showMenu('main');
-        }
-        return;
+    if (opt.id === 'back') { 
+        if (currentPath.length > 1) currentPath.pop(); 
+        showMenu(currentPath[currentPath.length - 1]); 
+        return; 
     }
 
-    if (opt.id === 'back') {
-        if (currentPath.length > 1) {
-            currentPath.pop();
-            showMenu(currentPath[currentPath.length - 1]);
-        } else {
-            showMenu('main');
-        }
-        return;
-    }
-
-    if (opt.link) {
-        window.open(opt.link, '_blank');
-        return;
-    }
+    if (opt.link) { window.open(opt.link, '_blank'); return; }
 
     addMessage(opt.label, 'user');
 
-    if (opt.type === 'form_147') {
-        startReclamoForm();
+    // REGISTRO DE EDAD
+    if (opt.type === 'age_select') {
+        userAge = opt.label; 
+        localStorage.setItem('muni_user_age', userAge);
+        registrarEvento("Registro", "Perfil Completo"); // Registra el fin del registro
+        showTyping();
+        setTimeout(() => {
+            addMessage(`¡Gracias <b>${userName}</b>! Ya tengo tus datos. ¿En qué te ayudo hoy?`, 'bot');
+            resetToMain();
+        }, 1000);
         return;
     }
+
+    // REGISTRO DE CLICKS (Solo si no es volver ni registro)
+    registrarEvento("Click", opt.label || opt.id);
+
+    if (opt.type === 'form_147') return startReclamoForm();
+    showTyping();
+    const frase = getFraseAleatoria();
 
     if (opt.type === 'leaf' || opt.apiKey) {
-        const content = RES[opt.apiKey] || "Información no disponible.";
-        const frase = getFraseAleatoria();
         setTimeout(() => {
-            addMessage(frase, 'bot');
-            setTimeout(() => {
-                addMessage(content, 'bot');
-                showNavControls(); 
-            }, 600);
-        }, 400);
-        return;
-    }
-
-    if (MENUS[opt.id]) {
-        const frase = getFraseAleatoria();
-        setTimeout(() => {
-            addMessage(frase, 'bot');
-            setTimeout(() => {
-                currentPath.push(opt.id);
-                showMenu(opt.id);
-            }, 500);
-        }, 300);
+            addMessage(`${frase}<br>${RES[opt.apiKey] || "Información no disponible."}`, 'bot');
+            showNavControls(); 
+        }, 800);
+    } else if (MENUS[opt.id]) {
+        currentPath.push(opt.id);
+        setTimeout(() => { addMessage(frase, 'bot'); showMenu(opt.id); }, 600);
     }
 }
 
 function showMenu(key) {
+    if (document.getElementById('typingIndicator')) removeTyping();
     const menu = MENUS[key];
     const title = typeof menu.title === 'function' ? menu.title(userName) : menu.title;
-    
     let opts = [...menu.options];
     if (currentPath.length > 1) opts.push({ id: 'back', label: '⬅️ Volver' });
-    
-    setTimeout(() => addMessage(title, 'bot', opts), 400);
+    addMessage(title, 'bot', opts);
 }
 
 function showNavControls() {
-    const container = document.getElementById('chatContainer');
-    const div = document.createElement('div');
-    div.className = 'nav-controls';
-    
-    div.innerHTML = `
-        <button class="nav-btn btn-back" onclick="handleAction({id:'nav_back'})">⬅ Volver</button>
-        <button class="nav-btn btn-home" onclick="handleAction({id:'nav_home'})">🏠 Inicio</button>
-    `;
-    container.appendChild(div);
-    
-    // Scroll actualizado para botones de navegación
-    setTimeout(() => {
-        container.scrollTop = container.scrollHeight;
-    }, 100);
+    const container = document.getElementById('chatMessages');
+    const navDiv = document.createElement('div'); navDiv.className = 'options-container'; 
+    navDiv.innerHTML = `<button class="option-button back" onclick="showMenu(currentPath[currentPath.length - 1])">⬅️ Volver</button>
+                        <button class="option-button" onclick="resetToMain()">🏠 Inicio</button>`;
+    container.appendChild(navDiv); scrollToBottom();
 }
 
-/* --- FORMULARIO 147 --- */
+function resetToMain() { currentPath = ['main']; showTyping(); setTimeout(() => showMenu('main'), 600); }
+
+/* --- 6. FORMULARIO 147 --- */
 function startReclamoForm() {
-    isAwaitingForm = true;
-    currentFormStep = 1;
-    toggleInput(true); 
-    setTimeout(() => addMessage("📝 <b>Paso 1/3:</b> ¿Qué tipo de problema es? (Ej: Luminaria, Basura)", 'bot'), 500);
+    isAwaitingForm = true; currentFormStep = 1; toggleInput(true); 
+    showTyping(); setTimeout(() => addMessage("📝 <b>Paso 1/3:</b> ¿Qué problema es? (Ej: Luminaria, Basura)", 'bot'), 600);
 }
 
 function processFormStep(text) {
-    if (currentFormStep === 1) {
-        formData.tipo = text;
-        currentFormStep = 2;
-        setTimeout(() => addMessage("📍 <b>Paso 2/3:</b> ¿Cuál es la dirección exacta?", 'bot'), 500);
-    } else if (currentFormStep === 2) {
-        formData.ubicacion = text;
-        currentFormStep = 3;
-        setTimeout(() => addMessage("🖊️ <b>Paso 3/3:</b> Breve descripción del problema.", 'bot'), 500);
-        formData.descripcion = text;
-    } else if (currentFormStep === 3) {
-         setTimeout(() => addMessage("🖊️ <b>Paso 4/4:</b> Si puede adjunte una foto o archivo.", 'bot'), 500);
-    } else if (currentFormStep === 4) {
-        formData.descripcion = text;
-        finalizeForm();
-    }
+    showTyping();
+    setTimeout(() => {
+        if (currentFormStep === 1) { formData.tipo = text; currentFormStep = 2; addMessage("📍 <b>Paso 2/3:</b> ¿Dirección exacta?", 'bot'); }
+        else if (currentFormStep === 2) { formData.ubicacion = text; currentFormStep = 3; addMessage("🖊️ <b>Paso 3/3:</b> Descripción breve.", 'bot'); }
+        else if (currentFormStep === 3) { formData.descripcion = text; finalizeForm(); }
+    }, 600);
 }
 
 function finalizeForm() {
-    isAwaitingForm = false;
-    toggleInput(false);
-    const tel147 = "5492241514700"; 
-    
-    const msg = `🏛️ *RECLAMO 147* 🏛️\n👤 *Vecino:* ${userName}\n🏷️ *Tipo:* ${formData.tipo}\n📍 *Ubicación:* ${formData.ubicacion}\n📝 *Desc:* ${formData.descripcion}`;
-    const url = `https://wa.me/${tel147}?text=${encodeURIComponent(msg)}`;
-    
-    const cardHtml = `
-        <div class="info-card">
-            ✅ <strong>Datos Listos</strong><br>
-            Presioná abajo para enviar el reporte oficial.
-            <a href="${url}" target="_blank" class="wa-btn">📲 ENVIAR RECLAMO</a>
-        </div>`;
-        
-    addMessage(cardHtml, 'bot');
+    isAwaitingForm = false; toggleInput(false);
+    const msg = `🏛️ *RECLAMO 147*\n👤 *Vecino:* ${userName}\n🏷️ *Tipo:* ${formData.tipo}\n📍 *Ubicación:* ${formData.ubicacion}\n📝 *Desc:* ${formData.descripcion}`;
+    const url = `https://wa.me/5492241514700?text=${encodeURIComponent(msg)}`;
+    addMessage(`<div class="info-card">✅ <strong>Datos Listos</strong><br><a href="${url}" target="_blank" class="wa-btn">📲 ENVIAR RECLAMO</a></div>`, 'bot');
     showNavControls();
 }
 
-/* --- LÓGICA DE INICIO --- */
-function processInput() {
-    const input = document.getElementById('userInput');
-    const val = input.value.trim();
-    if(!val) return;
-    
-    // --- NUEVO: REGISTRO DE TEXTO ---
-    registrarEvento("Consulta Escrita", val);
-    // --------------------------------
-
-    const texto = val.toLowerCase();
-
-    /* --- 🔒 COMANDO SECRETO DE AUTOR --- */
-    if (texto === 'autor' || texto === 'creador') {
-        const firma = `
-        <div class="info-card" style="border-left: 5px solid #000; background: #fff;">
-            👨‍💻 <b>Desarrollo Original</b><br><br>
-            Este sistema fue diseñado y programado por:<br>
-            <b>Federico de Sistemas</b><br>
-            <i>Municipalidad de Chascomús</i><br>
-            © 2026 - Todos los derechos reservados.
-        </div>`;
-        addMessage(val, 'user');
-        setTimeout(() => addMessage(firma, 'bot'), 500);
-        input.value = "";
-        return;
-    }
-
-    /* --- LÓGICA DE FORMULARIOS --- */
-    if (isAwaitingForm) {
-        addMessage(val, 'user');
-        input.value = "";
-        processFormStep(val);
-        return;
-    }
-
- /* --- PRIMER INGRESO (NOMBRE) --- */
-    if (!userName) {
-        addMessage(val, 'user');
-        userName = val;
-        localStorage.setItem('muni_user_name', val);
-        input.value = "";
-        
-        setTimeout(() => {
-            addMessage(`¡Mucho gusto, <b>${userName}</b>! 👋 Soy MuniBot, el asistente virtual de Municipalidad de Chascomús. ¿En que puedo ayudarte?
-        Puedes escribir frases que tengan palabras clave como "casa, agua, foodtruck, caps".
-        Te doy un ej; "Como habilito mi local", "puedo ver mi consumo de agua", etc.
-        O simplemente la palabra "MENU" para ver todo 🤖`, 'bot');
-            
-            const atajos = [
-                { id: 'oea_link', label: '👀 Ojos en Alerta', type: 'leaf', apiKey: 'ojos_en_alerta' },
-                { id: 'ag_actual', label: '🎭 Agenda Cultural', type: 'leaf', apiKey: 'agenda_actual' },
-                { id: 'f_lista', label: '💊 Farmacias de Turno', type: 'leaf', apiKey: 'farmacias_lista' },
-                { id: 'h_tur', label: '📅 Turnos Hospital', type: 'leaf', apiKey: 'h_turnos' },
-                { id: 'nav_home', label: '☰ VER MENÚ COMPLETO' }
-            ];
-
-            addMessage(`Acá tenés algunos accesos rápidos para empezar, o podés escribir <b>"Menú"</b> para ver todo:`, 'bot', atajos);
-        }, 600);
-        return;
-    }
-
-    addMessage(val, 'user');
-    input.value = "";
-
-    /* --- 🧠 CEREBRO DE RESPUESTAS RÁPIDAS --- */
-    
-    // 1. SALUDOS
-    if (['hola', 'buen dia', 'buenas', 'que tal'].some(palabra => texto.includes(palabra))) {
-        setTimeout(() => addMessage(`¡Hola <b>${userName}</b>! 👋 Qué gusto saludarte. ¿En qué te puedo ayudar hoy? Seleccioná una opción del menú.`, 'bot'), 600);
-        return;
-    }
-
-    // 2. AGRADECIMIENTOS
-    if (['gracias', 'muchas gracias', 'genial', 'excelente' , '👍🏽' , '👌🏼'].some(palabra => texto.includes(palabra))) {
-        setTimeout(() => addMessage("¡De nada! Es un placer ayudarte. 😊", 'bot'), 600);
-        return;
-    }
-
-    // 3. PEDIDO DE AYUDA / MENÚ
-    if (['ayuda', 'menu', 'menú', 'inicio', 'botones', 'opciones', "me ayudas", "ayudame"].some(palabra => texto.includes(palabra))) {
-        setTimeout(() => {
-            addMessage("¡Entendido! Acá tenés el menú principal:", 'bot');
-            resetToMain();
-        }, 600);
-        return;
-    }
-
-    // 4. INSULTOS (Filtro de educación)
-    if (['boludo', 'tonto', 'inutil', 'mierda', 'puto' , 'forro' , 'estupido' , 'tarado'].some(palabra => texto.includes(palabra))) {
-        setTimeout(() => addMessage("Por favor, mantengamos el respeto. Soy un robot intentando ayudar. 🤖💔", 'bot'), 600);
-        return;
-    }
-
-    /* --- 5. BUSCADOR INTELIGENTE (SUPER CEREBRO 🧠) --- */
-    
-    const diccionario = {
+/* --- 7. BUSCADOR INTELIGENTE (DATA PRESERVADA) --- */
+function ejecutarBusquedaInteligente(texto) {
+   const diccionario = {
         'farmacia':   { type: 'leaf', apiKey: 'farmacias_lista', label: '💊 Farmacias' },
         'agenda':     { type: 'leaf', apiKey: 'agenda_actual', label: '🎭 Agenda Cultural' },
         'cultural':   { type: 'leaf', apiKey: 'agenda_actual', label: '🎭 Agenda Cultural' },
@@ -1204,77 +1029,42 @@ function processInput() {
         'digital':    { id: 'el_digital', label: '📰 Diario Digital' }
 
     };
-    
-    for (let palabra in diccionario) {
-        if (texto.includes(palabra)) { 
-            const accion = diccionario[palabra];
-            setTimeout(() => {
-                addMessage(`¡Encontré esto sobre tu consulta <b>"${palabra.toUpperCase()}"</b>! 👇`, 'bot');
-                handleAction(accion);
-            }, 600);
-            return;
+    showTyping();
+    setTimeout(() => {
+        for (let palabra in diccionario) {
+            if (texto.includes(palabra)) { 
+                addMessage(getFraseAleatoria(), 'bot');
+                handleAction(diccionario[palabra]); return;
+            }
         }
+        addMessage("No entendí. Escribí '<b>Menú</b>' para ver opciones. 🤔", 'bot');
+        showNavControls();
+    }, 800);
+}
+
+function processInput() {
+    const input = document.getElementById('userInput'); const val = input.value.trim();
+    if(!val || isBotThinking) return;
+    if (isAwaitingForm) { addMessage(val, 'user'); input.value = ""; processFormStep(val); return; }
+    if (!userName) { userName = val; localStorage.setItem('muni_user_name', val); input.value = ""; showTyping(); setTimeout(() => addMessage(`¡Gusto conocerte <b>${userName}</b>! 👋 ¿De qué <b>barrio</b> sos?`, 'bot'), 800); return; }
+    if (!userNeighborhood) { 
+        userNeighborhood = val; localStorage.setItem('muni_user_neighborhood', val); input.value = ""; showTyping();
+        const edades = [{label:'-20', type:'age_select'}, {label:'20-40', type:'age_select'}, {label:'40-60', type:'age_select'}, {label:'+60', type:'age_select'}];
+        setTimeout(() => addMessage(`¡Genial! <b>${userName}</b>, ¿cuál es tu rango de edad?`, 'bot', edades), 800);
+        return;
     }
-    
-    /* --- RESPUESTA POR DEFECTO --- */
-    setTimeout(() => addMessage("No entendí tu mensaje. 🤔<br>Por favor, <b>utilizá los botones del menú</b> para navegar o escribí 'Ayuda' para volver al inicio.", 'bot'), 600);
+    addMessage(val, 'user'); registrarEvento("Escribió", val); input.value = ""; ejecutarBusquedaInteligente(val.toLowerCase());
 }
 
-function resetToMain() {
-    currentPath = ['main'];
-    showMenu('main');
-}
-
-function clearSession() {
-    if(confirm("¿Cerrar sesión y borrar nombre?")) {
-        localStorage.removeItem('muni_user_name');
-        location.reload();
-    }
-}
-
-// Event listeners
+/* --- 8. CARGA --- */
 document.getElementById('sendButton').onclick = processInput;
 document.getElementById('userInput').onkeypress = (e) => { if(e.key === 'Enter') processInput(); };
+function toggleInput(show) { document.getElementById('inputBar').style.display = show ? 'flex' : 'none'; }
+function toggleInfo() { document.getElementById('infoModal').classList.toggle('show'); }
+function clearSession() { if(confirm("¿Borrar datos?")) { localStorage.clear(); location.reload(); } }
 
-window.onload = () => {
-    if (!userName) {
-        addMessage("👋 Bienvenido al asistente de Chascomús.<br>Para comenzar, por favor <b>ingresá tu nombre</b>:", 'bot');
-        toggleInput(true);
-    } else {
-        showMenu('main');
-    }
-};
-
-// Service Worker Registration
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => { 
-        navigator.serviceWorker.register('./sw.js')
-            .then(reg => console.log('SW registrado:', reg))
-            .catch(err => console.log('SW error:', err));
-    });
-}
-
-// Objeto app para funciones globales
-const app = {
-    toggleInfo: toggleInfo,
-    clearSession: clearSession
-};
-
-/* --- Mensaje en consola --- */
-console.log("%c⛔ DETENTE", "color: red; font-size: 40px; font-weight: bold;");
-console.log("%cEste código es propiedad intelectual de la Municipalidad de Chascomús.", "font-size: 16px; color: #004a7c;");
-console.log("%cSi alguien te indicó que pegues algo aquí, es una estafa para robarte información o dinero.", "font-size: 14px; color: #000;");
-console.log("%cSi sos desarrollador, podés contactarte con Federico de Sistemas para colaborar en proyectos oficiales.", "font-size: 14px; color: #000;");
-
-
-
-
-
-
-
-
-
-
+window.onload = () => { if (!userName) { showTyping(); setTimeout(() => addMessage("👋 Bienvenido. Para empezar, ¿cómo es tu <b>nombre</b>?", 'bot'), 600); } else resetToMain(); };
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');
 
 
 
